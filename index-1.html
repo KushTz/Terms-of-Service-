@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — TOOLsHOME.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A0F1E;
+    --navy2: #111827;
+    --teal: #00D4AA;
+    --indigo: #6366F1;
+    --light: #F0F4FF;
+    --muted: #8892A4;
+    --border: rgba(255,255,255,0.08);
+    --card: rgba(255,255,255,0.04);
+    --glass: rgba(0,212,170,0.08);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy);
+    color: var(--light);
+    min-height: 100vh;
+    line-height: 1.8;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,15,30,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.35rem; font-weight: 800;
+    text-decoration: none;
+  }
+  .logo span.t1 { color: var(--teal); }
+  .logo span.t2 { color: var(--light); }
+  .logo span.t3 { color: var(--indigo); }
+  .nav-links {
+    display: flex; gap: 0.25rem; list-style: none;
+  }
+  .nav-links li a {
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.875rem; font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-links li a:hover { color: var(--light); background: var(--glass); }
+
+  /* HERO */
+  .page-hero {
+    padding: 6rem 2rem 3rem;
+    text-align: center;
+    background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 70%);
+  }
+  .page-hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 0.75rem;
+  }
+  .page-hero h1 span {
+    background: linear-gradient(135deg, var(--teal), var(--indigo));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .page-hero p { color: var(--muted); font-size: 0.95rem; max-width: 500px; margin: 0 auto; }
+  .last-updated {
+    display: inline-block;
+    background: rgba(0,212,170,0.1);
+    border: 1px solid rgba(0,212,170,0.25);
+    color: var(--teal);
+    padding: 0.3rem 1rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  /* CONTENT */
+  .content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem;
+  }
+
+  /* SUMMARY BOX */
+  .summary-box {
+    background: linear-gradient(135deg, rgba(0,212,170,0.08), rgba(99,102,241,0.08));
+    border: 1px solid rgba(0,212,170,0.2);
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .summary-box h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+  .summary-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #B0BAC9;
+  }
+  .summary-item span.icon { font-size: 1rem; margin-top: 0.1rem; }
+
+  /* SECTIONS */
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .section::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--teal), var(--indigo));
+  }
+  .section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+  .section p {
+    color: #B0BAC9;
+    font-size: 0.925rem;
+    margin-bottom: 0.85rem;
+    line-height: 1.8;
+  }
+  .section p:last-child { margin-bottom: 0; }
+  .section ul {
+    list-style: none;
+    margin: 0.5rem 0 0.85rem;
+  }
+  .section ul li {
+    color: #B0BAC9;
+    font-size: 0.925rem;
+    padding: 0.3rem 0 0.3rem 1.25rem;
+    position: relative;
+  }
+  .section ul li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--teal);
+    font-size: 0.8rem;
+  }
+  .warning-box {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    color: #fca5a5;
+  }
+  .info-box {
+    background: rgba(0,212,170,0.07);
+    border: 1px solid rgba(0,212,170,0.2);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    color: #B0BAC9;
+  }
+  .contact-link {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .contact-link:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  footer strong { color: var(--teal); }
+  footer a { color: var(--muted); text-decoration: none; margin: 0 0.5rem; }
+  footer a:hover { color: var(--teal); }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .section { padding: 1.5rem; }
+    .summary-box { padding: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">
+    <span class="t1">TOOLS</span><span class="t2">HOME</span><span class="t3">.com</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="calculators.html">Calculators</a></li>
+    <li><a href="converters.html">Converters</a></li>
+    <li><a href="color-picker.html">Color Tools</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <h1>Terms of <span>Service</span></h1>
+  <p>Please read these terms carefully before using TOOLsHOME.com.</p>
+  <div class="last-updated">Last updated: June 2026</div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- SUMMARY -->
+  <div class="summary-box">
+    <h3>⚡ Quick Summary (Plain English)</h3>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <span class="icon">✅</span>
+        <span>Use all tools for free, personally or professionally</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">✅</span>
+        <span>No account or sign-up required — ever</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">✅</span>
+        <span>Results are for reference only — always verify important calculations</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">❌</span>
+        <span>Do not copy or republish our tools as your own</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">❌</span>
+        <span>Do not use our tools for illegal or harmful purposes</span>
+      </div>
+      <div class="summary-item">
+        <span class="icon">❌</span>
+        <span>We are not liable for decisions made based on tool results</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCEPTANCE -->
+  <div class="section">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using TOOLsHOME.com ("the Site," "we," "our"), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please discontinue use of the site.</p>
+    <p>We reserve the right to update these terms at any time. Continued use of the site after changes are posted constitutes your acceptance of the updated terms.</p>
+  </div>
+
+  <!-- USE OF TOOLS -->
+  <div class="section">
+    <h2>2. Use of Our Tools</h2>
+    <p>TOOLsHOME.com provides free online tools including calculators, converters, and utilities for personal and professional use. You are permitted to:</p>
+    <ul>
+      <li>Use any tool on this site for personal, educational, or business purposes</li>
+      <li>Share links to our tools with others</li>
+      <li>Use results from our tools as a reference or starting point for your own work</li>
+    </ul>
+    <div class="info-box">
+      All tools run entirely in your browser. No data you enter is transmitted to our servers or stored anywhere outside your own device.
+    </div>
+  </div>
+
+  <!-- PROHIBITED -->
+  <div class="section">
+    <h2>3. Prohibited Activities</h2>
+    <p>You agree not to use TOOLsHOME.com in any way that:</p>
+    <ul>
+      <li>Violates any applicable local, national, or international law or regulation</li>
+      <li>Involves copying, scraping, or republishing our tools, code, or content as your own</li>
+      <li>Attempts to interfere with, disrupt, or overload the site's infrastructure</li>
+      <li>Involves automated access (bots, scrapers) without our prior written permission</li>
+      <li>Is harmful, fraudulent, deceptive, or misleading to others</li>
+      <li>Infringes on the intellectual property rights of TOOLsHOME.com or any third party</li>
+    </ul>
+  </div>
+
+  <!-- ACCURACY -->
+  <div class="section">
+    <h2>4. Accuracy of Results</h2>
+    <p>Our tools are designed to provide helpful estimates and reference calculations. While we strive for accuracy, we cannot guarantee that results are free from errors.</p>
+    <div class="warning-box">
+      ⚠️ Tool results should not be used as the sole basis for important financial, medical, legal, or professional decisions. Always verify critical calculations with a qualified professional.
+    </div>
+    <p>TOOLsHOME.com is not liable for any loss, damage, or negative outcome resulting from reliance on information or results produced by our tools.</p>
+  </div>
+
+  <!-- INTELLECTUAL PROPERTY -->
+  <div class="section">
+    <h2>5. Intellectual Property</h2>
+    <p>All content on TOOLsHOME.com — including but not limited to the site design, layout, code, graphics, and text — is the property of TOOLsHOME.com and is protected by applicable intellectual property laws.</p>
+    <p>You may not reproduce, distribute, modify, or create derivative works from any part of this site without our express written permission. Linking to our site is permitted and encouraged.</p>
+  </div>
+
+  <!-- THIRD PARTY -->
+  <div class="section">
+    <h2>6. Third-Party Services</h2>
+    <p>TOOLsHOME.com may use third-party services including analytics providers and advertising networks (such as Google AdSense and Google Analytics). These services have their own terms of service and privacy policies, which govern their use of data collected through our site.</p>
+    <p>We are not responsible for the content, practices, or policies of any third-party services linked to or embedded within our site.</p>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="section">
+    <h2>7. Disclaimer of Warranties</h2>
+    <p>TOOLsHOME.com is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not warrant that:</p>
+    <ul>
+      <li>The site will be uninterrupted, error-free, or completely secure</li>
+      <li>Results from our tools will be accurate, complete, or suitable for any specific purpose</li>
+      <li>Any defects or errors will be corrected</li>
+    </ul>
+    <p>Your use of the site is entirely at your own risk.</p>
+  </div>
+
+  <!-- LIMITATION OF LIABILITY -->
+  <div class="section">
+    <h2>8. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, TOOLsHOME.com and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, this site or its tools — even if we have been advised of the possibility of such damages.</p>
+    <p>Our total liability for any claim arising from your use of the site shall not exceed the amount you paid to use the site, which in most cases is zero, as all tools are provided free of charge.</p>
+  </div>
+
+  <!-- CHANGES -->
+  <div class="section">
+    <h2>9. Changes to the Site</h2>
+    <p>We reserve the right to modify, suspend, or discontinue any part of TOOLsHOME.com at any time, with or without notice. We are not liable to you or any third party for any modification, suspension, or discontinuation of the site or its tools.</p>
+  </div>
+
+  <!-- GOVERNING LAW -->
+  <div class="section">
+    <h2>10. Governing Law</h2>
+    <p>These Terms of Service shall be governed by and construed in accordance with applicable law. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the relevant courts.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section">
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, please contact us:</p>
+    <p><strong>Email:</strong> <a href="mailto:kushbongo.tz@gmail.com" class="contact-link">kushbongo.tz@gmail.com</a></p>
+    <p>We aim to respond to all inquiries within a few business days.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>TOOLsHOME.com</strong> — Free online tools for everyone
+  <br><br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+  <br><br>
+  © 2026 TOOLsHOME.com — All tools are free to use
+</footer>
+
+</body>
+</html>
